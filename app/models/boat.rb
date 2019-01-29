@@ -1,5 +1,5 @@
 class Boat < ActiveRecord::Base
-  include ActiveRecord::QueryMethods
+  # include ActiveRecord::QueryMethods
 
     belongs_to  :captain
     has_many    :boat_classifications
