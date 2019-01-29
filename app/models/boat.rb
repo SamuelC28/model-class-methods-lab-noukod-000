@@ -18,7 +18,7 @@ class Boat < ActiveRecord::Base
     end
 
     def self.last_three_alphabetically
-      order(name: :desc).limit(3)
+      # order(name: :desc).limit(3)
       where(Boat.arel_table.order.desc.limit(3))
     end
 
