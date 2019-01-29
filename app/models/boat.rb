@@ -30,12 +30,6 @@ class Boat < ActiveRecord::Base
     end
 
     def self.with_three_classifications
-
-  #"SELECT name, count(name) FROM boats
-  #INNER JOIN boat_classifications ON boat_classifications.boat_id = boats.id
-  #group by name
-  #having count(name) = 3"
-
         joins(:boat_classifications).group(:name).having('count(name)=3')
     end
 
