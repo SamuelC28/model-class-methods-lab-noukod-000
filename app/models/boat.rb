@@ -14,7 +14,8 @@ class Boat < ActiveRecord::Base
     end
 
     def self.ship
-      where(Boat.arel_table[:length].gt(20))
+      # where(Boat.arel_table[:length].gt(20))
+      where 'length >= 20'
     end
 
     def self.last_three_alphabetically
