@@ -14,7 +14,6 @@ class Boat < ActiveRecord::Base
     end
 
     def self.ship
-      # where(Boat.arel_table[:length].gt(20))
       where 'length >= 20'
     end
 
